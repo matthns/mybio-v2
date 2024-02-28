@@ -1,9 +1,14 @@
+import Welcome from "./(pages)/Welcome/Welcome.page";
+import { Header } from "./components/Header/Header";
+import { LayoutRoot } from "./components/LayoutRoot";
+
 export default function Home() {
   return (
     <main>
-      <div>
-        <h1>Hello World!</h1>
-      </div>
+      <LayoutRoot>
+        <Header />
+        <Welcome />
+      </LayoutRoot>
     </main>
   );
 }
