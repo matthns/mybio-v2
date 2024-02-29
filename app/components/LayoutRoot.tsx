@@ -1,11 +1,9 @@
-import { FC, ReactNode } from "react"
+import { FC, ReactNode } from "react";
 
 interface LayoutRootProps {
-	children: ReactNode
+  children: ReactNode;
 }
 
 export const LayoutRoot: FC<LayoutRootProps> = ({ children }) => {
-	return (
-        <main className="w-screen max-w-screen-2xl h-[100svh] mx-auto px-[30px] py-[30px] md:px-[60px] lg:py-[60px] lg:px-[100px]">{children}</main>
-	)
-}
+  return <main className="w-screen h-screen pt-28">{children}</main>;
+};
