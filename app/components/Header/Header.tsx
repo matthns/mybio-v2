@@ -25,7 +25,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="fixed inset-0 px-[1.875rem] w-full flex justify-between lg:justify-normal gap-[6.25rem] items-center h-24 z-50">
+    <header className={`fixed inset-0 px-[1.875rem] w-full flex justify-between lg:justify-normal gap-[6.25rem] items-center h-24 z-50 ${isMenuOpen ? "" : "bg-white"}`}>
       <a href="#welcome">
         <Logo />
       </a>
