@@ -1,9 +1,11 @@
 import { LayoutRoot } from "@/app/components/LayoutRoot";
 import { ElementType } from "react";
-import { BiLogoCss3, BiLogoFigma, BiLogoGit, BiLogoHtml5, BiLogoJava, BiLogoJavascript, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript, BiSolidGraduation } from "react-icons/bi";
-import { SiStyledcomponents } from "react-icons/si";
+import { BiLogoCss3, BiLogoFigma, BiLogoGit, BiLogoHtml5, BiLogoJava, BiLogoJavascript, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript, BiLogoWindows, BiNetworkChart, BiSolidGraduation } from "react-icons/bi";
+import { SiMicrosoftazure, SiMicrosoftoffice, SiStyledcomponents } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-import { FaDatabase } from "react-icons/fa";
+import { FaCentos, FaDatabase, FaLinux, FaNetworkWired, FaUbuntu  } from "react-icons/fa";
+import { GiFirewall } from "react-icons/gi";
+import { GrVirtualMachine } from "react-icons/gr";
 
 
 
@@ -56,8 +58,19 @@ const stack: stackProps[] = [
   {id:"11", icon:BiLogoGit, label:"Git"},
 ]
 
-const it:stackProps[] = [
+const itSkills:stackProps[] = [
   /** descrever habilidades IT */
+  {id:"0", icon:BiLogoWindows, label:"Windows"},
+  {id:"1", icon:FaLinux, label:"Linux"},
+  {id:"2", icon:FaUbuntu, label:"Ubuntu"},
+  {id:"3", icon:FaCentos, label:"CentOS"},
+  {id:"4", icon: SiMicrosoftoffice ,label:"Office 365"},
+  {id:"5", icon:SiMicrosoftazure, label:"Azure"},
+  {id:"6", icon:FaNetworkWired, label:"Samba"},
+  {id:"7", icon:GiFirewall, label:"Firewall" },
+  {id:"8", icon:BiNetworkChart, label:"Redes" },
+  {id:"9", icon:GrVirtualMachine, label: "VMs" }
+
 ]
 
 
@@ -65,7 +78,7 @@ export default function About() {
   return (
     <LayoutRoot>
     <main
-      className="w-full min-h-[100%] flex flex-col gap-[2.938rem]"
+      className="w-full flex flex-col gap-[2.938rem]"
       id="about"
     >
       <h1 className="text-center text-[28px]">Sobre mim</h1>
@@ -98,8 +111,23 @@ export default function About() {
         </ul>
         <ul className="pt-[2.5rem] px-[1.25rem]">
           <h1 className="font-semibold text-[#666666]">Habilidades Dev</h1>
-          <div className="pt-[1.25rem] flex flex-wrap gap-[0.625rem]">
+          <div className="pt-[1.25rem] flex flex-wrap gap-[1.25rem]">
             {stack.map(x => (
+              <li key={x.label} className="p-2 rounded-md bg-white text-[#666666] w-[4rem] h-[4rem] flex flex-col items-center justify-center flex-wrap">
+                <div className="flex flex-col items-center justify-center">
+                  <i className="text-[1.5rem]">
+                  <x.icon />
+                  </i>
+                  <p className="text-[0.625rem]">{x.label}</p>
+                </div>
+              </li>
+            ))}
+            </div>
+        </ul>
+        <ul className="pt-[2.5rem] px-[1.25rem]">
+          <h1 className="font-semibold text-[#666666]">Habilidades IT</h1>
+          <div className="pt-[1.25rem] flex flex-wrap gap-[1.25rem]">
+            {itSkills.map(x => (
               <li key={x.label} className="p-2 rounded-md bg-white text-[#666666] w-[4rem] h-[4rem] flex flex-col items-center justify-center flex-wrap">
                 <div className="flex flex-col items-center justify-center">
                   <i className="text-[1.5rem]">

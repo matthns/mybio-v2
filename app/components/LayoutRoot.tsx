@@ -5,5 +5,5 @@ interface LayoutRootProps {
 }
 
 export const LayoutRoot: FC<LayoutRootProps> = ({ children }) => {
-  return <main className="w-screen h-screen pt-28">{children}</main>;
+  return <main className="w-screen h-screen max-w-screen-2xl pt-28">{children}</main>;
 };
